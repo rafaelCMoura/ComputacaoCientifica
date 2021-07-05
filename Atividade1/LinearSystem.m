@@ -1,5 +1,6 @@
 classdef LinearSystem
     properties
+        matrixName = "";
         A = [];
         b = [];
         x_gauss = [];
@@ -11,6 +12,8 @@ classdef LinearSystem
 
     methods
         function self = LinearSystem(matrixName, w_sor, tol, maxiter)
+            self.matrixName = matrixName;
+
             sparseMatrix = SparseMatrix(matrixName);
             self.A = sparseMatrix.compressedMatrix;
             self.b = self.A*ones(sparseMatrix.numberOfRows, 1);
@@ -59,7 +62,7 @@ classdef LinearSystem
                     semilogy(iter, er(iter), color);
                     xlabel("iter - Número de Iteraçōes");
                     ylabel("log(er) - Norma do erro relativo");
-                    title("Comparativo entre os métodos iterativos");
+                    title(strcat("Comparativo entre os métodos iterativos: Matriz -", self.matrixName));
                     pause(0.1);
             endwhile;
             normx = norm(x,inf);
@@ -95,7 +98,7 @@ classdef LinearSystem
                     semilogy(iter, er(iter), color);
                     xlabel("iter - Número de Iteraçōes");
                     ylabel("log(er) - Norma do erro relativo");
-                    title("Comparativo entre os métodos iterativos");
+                    title(strcat("Comparativo entre os métodos iterativos: Matriz -", self.matrixName));
                     pause(0.1);
             endwhile;
             normx = norm(x,inf);
