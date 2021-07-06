@@ -1,0 +1,89 @@
+\documentclass[a4paper]{article} 
+\input{head}
+\begin{document}
+
+%-------------------------------
+%	TITLE SECTION
+%-------------------------------
+
+\fancyhead[C]{}
+\hrule \medskip % Upper rule
+\begin{minipage}{0.295\textwidth} 
+\raggedright
+\footnotesize
+Rafael Cabral de Moura \hfill\\
+rafaelcabraldemoura@gmail.com
+\end{minipage}
+\begin{minipage}{0.4\textwidth} 
+\centering 
+\large 
+1º Exercício Computacional \\ 
+\normalsize 
+Computação Científica 2021 \\
+\end{minipage}
+\begin{minipage}{0.295\textwidth} 
+\raggedleft
+06-07-2021\hfill\\
+\end{minipage}
+\medskip\hrule 
+\bigskip
+
+%-------------------------------
+%	CONTENTS
+%-------------------------------
+
+\section{Métodos Diretos}
+
+\subsection{Configurações de Esparsidade}
+
+texto matriz A
+\begin{align*}
+grafico A
+\end{align*}
+
+texto matriz B
+\begin{align*}
+grafico B
+\end{align*}
+
+\subsection{Informações das Matrizes}
+A seguir temos as métricas solicitadas para as matrizes selecionadas:
+
+\def\arraystretch{1.3}
+\begin{table}[ht]
+\centering
+\begin{tabular}[t]{ccc}
+\hline
+&nos4&nos9\\
+\hline
+$ 100 - \left ( \frac{nnz(A)}{nnz(L)+nnz(U)} \right )*100 $                     & 1 & 2\\
+$\frac{\left \| \delta x \right \|_\infty}{\left \| \bar x \right \|_\infty}$   & 1 & 2\\
+$\frac{\left \| \delta A \right \|_\infty}{\left \| A \right \|_\infty}$        & 1 & 2\\
+$\frac{\left \| \delta b \right \|_\infty}{\left \| b \right \|_\infty}$        & 1 & 2\\
+$\left \| r \right \|_\infty $                                                  & 4 & 5\\
+$cond(A)$                                                                       & 4 & 5\\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{Condicionamento}
+Sobre o condicionamento das matrizes
+
+
+
+\bigskip
+%------------------------------------------------
+
+\section{Métodos Iterativos}
+
+\subsection{Convergência dos Métodos Iterativos}
+
+\subsection{SOR}
+
+
+
+
+\bigskip
+%------------------------------------------------
+
+\end{document}
